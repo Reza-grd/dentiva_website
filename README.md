@@ -1,6 +1,6 @@
 # Website Resmi Dentiva
 
-Landing page resmi **dentiva.co.id**: rekam medis elektronik untuk klinik gigi.
+Landing page resmi **dentiva.id**: rekam medis elektronik untuk klinik gigi.
 
 Situs statis murni (HTML, CSS, dan JavaScript dalam satu file). Tidak perlu `npm install` atau proses build.
 
@@ -25,9 +25,9 @@ Klik dua kali `index.html` untuk membukanya di browser. Semua fitur berjalan tan
 1. Buat repo baru di GitHub, misalnya `dentiva-website`, lalu upload semua file di folder ini.
 2. Di [vercel.com](https://vercel.com), pilih **Add New → Project**, lalu import repo tersebut.
 3. Framework Preset: **Other**. Kosongkan Build Command dan Output Directory, lalu klik **Deploy**.
-4. Di **Settings → Domains**, tambahkan `dentiva.co.id` dan `www.dentiva.co.id`, lalu ikuti instruksi DNS dari Vercel.
+4. Di **Settings → Domains**, tambahkan `dentiva.id` dan `www.dentiva.id`, lalu ikuti instruksi DNS dari Vercel.
 
-> Repo aplikasi Dentiva (proyek Vite) sebaiknya dipindah ke subdomain, misalnya `app.dentiva.co.id`. Jangan gabungkan website ini ke root repo aplikasi karena `index.html` keduanya akan bentrok.
+> Repo aplikasi Dentiva (proyek Vite) sebaiknya dipindah ke subdomain, misalnya `app.dentiva.id`. Jangan gabungkan website ini ke root repo aplikasi karena `index.html` keduanya akan bentrok.
 
 ## Alternatif: GitHub Pages
 
@@ -47,12 +47,12 @@ Ganti juga nomor WhatsApp di bagian awal script (cari `WA_NUMBER`), gunakan form
 var WA_NUMBER = "6281234567890";
 ```
 
-Jika aplikasi sudah pindah ke subdomain, ganti semua `https://dentiva-main.vercel.app` dengan alamat barunya (misalnya `https://app.dentiva.co.id`).
+Jika aplikasi sudah pindah ke subdomain, ganti semua `https://dentiva-main.vercel.app` dengan alamat barunya (misalnya `https://app.dentiva.id`).
 
 > Dokumen Kebijakan Privasi dan Syarat & Ketentuan masih berupa draf. Mintalah konsultan hukum meninjaunya sebelum dipublikasikan.
 
 ## Setelah online
 
-- Daftarkan `https://dentiva.co.id/sitemap.xml` di [Google Search Console](https://search.google.com/search-console).
+- Daftarkan `https://dentiva.id/sitemap.xml` di [Google Search Console](https://search.google.com/search-console).
 - Cek tampilan preview link di [opengraph.xyz](https://www.opengraph.xyz) atau dengan mengirim link ke WhatsApp sendiri.
 - Perbarui `<lastmod>` di `sitemap.xml` setiap ada perubahan besar.
