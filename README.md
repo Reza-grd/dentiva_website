@@ -9,6 +9,8 @@ Situs statis murni (HTML, CSS, dan JavaScript dalam satu file). Tidak perlu `npm
 | File | Fungsi |
 |------|--------|
 | `index.html` | Halaman utama, termasuk Kebijakan Privasi (`#kebijakan-privasi`) dan Syarat & Ketentuan (`#syarat-ketentuan`) |
+| `unduh.html` | Halaman unduhan aplikasi desktop Windows & macOS (`/unduh`) |
+| `dentiva-app-icon.png` | Ikon aplikasi desktop (dipakai di halaman unduhan) |
 | `404.html` | Halaman "tidak ditemukan" |
 | `og-image.png` | Gambar preview saat link dibagikan (WhatsApp, Facebook, LinkedIn) |
 | `dentiva-logo.png`, `favicon.ico`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png` | Logo dan ikon |
@@ -56,3 +58,10 @@ Jika aplikasi sudah pindah ke subdomain, ganti semua `https://dentiva-main.verce
 - Daftarkan `https://dentiva.id/sitemap.xml` di [Google Search Console](https://search.google.com/search-console).
 - Cek tampilan preview link di [opengraph.xyz](https://www.opengraph.xyz) atau dengan mengirim link ke WhatsApp sendiri.
 - Perbarui `<lastmod>` di `sitemap.xml` setiap ada perubahan besar.
+
+## Merilis versi baru aplikasi desktop
+
+1. Unggah installer hasil build ke Supabase Storage, bucket `downloads`, dengan nama aslinya
+   (`Dentiva_<versi>_x64-setup.exe`, `Dentiva_<versi>_universal.dmg`).
+2. Di `unduh.html`, ubah `var VERSION = "1.10.0";` menjadi versi baru, lalu commit & deploy.
+   Ukuran dan tanggal berkas tampil otomatis.
