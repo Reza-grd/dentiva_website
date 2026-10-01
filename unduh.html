@@ -95,6 +95,10 @@ p{margin:0}
 .hero .lede{font-size:19px;color:var(--ink-soft);max-width:44ch;margin-top:24px}
 .hero .actions{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
 .meta{margin-top:16px;font-size:14px;color:var(--ink-soft)}
+.notice{display:flex;gap:12px;align-items:flex-start;margin-top:22px;max-width:52ch;padding:14px 16px;border:1px solid var(--line);border-left:3px solid var(--gold-bright);border-radius:14px;background:var(--surface);font-size:14px;color:var(--ink-soft);line-height:1.5}
+.notice svg{flex:none;width:20px;height:20px;color:var(--gold);margin-top:1px}
+.notice b{color:var(--ink);font-weight:600}
+.plat .notice{margin:0 0 18px;max-width:none}
 .icon-stage{position:relative;display:grid;place-items:center;aspect-ratio:1;max-width:460px;margin-inline:auto;width:100%}
 .icon-stage::before{content:"";position:absolute;inset:4%;border-radius:50%;border:1px solid color-mix(in srgb,var(--gold-bright) 45%,transparent);box-shadow:0 0 0 46px color-mix(in srgb,var(--gold-bright) 7%,transparent),0 0 0 92px color-mix(in srgb,var(--gold-bright) 4%,transparent)}
 .icon-stage img{position:relative;width:62%;height:auto;filter:drop-shadow(0 40px 50px rgba(15,34,56,.35))}
@@ -251,6 +255,7 @@ footer .copy{grid-column:1/-1;display:flex;justify-content:space-between;gap:16p
           <a class="btn btn-ghost btn-lg" id="dlSecondary" href="#unduh"><span id="dlSecondaryLabel">Semua platform</span></a>
         </div>
         <p class="meta fade" style="--l:4" id="dlMeta">Versi <span data-version>1.10.0</span> · Windows 10 &amp; 11 · macOS 11 ke atas</p>
+        <div class="notice fade" style="--l:5" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5.5c0 4.3 3 8 7 9.5 4-1.5 7-5.2 7-9.5V6z"/><path d="m9 12 2 2 4-4"/></svg><p><b>Installer Dentiva aman.</b> Karena aplikasi ini masih baru, browser atau Windows dapat menampilkan peringatan. Di Chrome klik <b>Download suspicious file</b>, lalu di Windows klik <b>More info → Run anyway</b>. Tanda tangan digital resmi sedang dalam proses.</p></div>
       </div>
       <div class="icon-stage fade" style="--l:2" aria-hidden="true">
         <img src="dentiva-app-icon.png" alt="" width="512" height="512">
@@ -276,6 +281,7 @@ footer .copy{grid-column:1/-1;display:flex;justify-content:space-between;gap:16p
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>RAM 4 GB, ruang kosong 200 MB</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Koneksi internet</li>
           </ul>
+          <div class="notice" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5.5c0 4.3 3 8 7 9.5 4-1.5 7-5.2 7-9.5V6z"/><path d="m9 12 2 2 4-4"/></svg><p>Jika muncul peringatan, pilih <b>Download suspicious file</b> (Chrome) atau <b>Keep</b> (Edge), lalu <b>More info → Run anyway</b> saat memasang.</p></div>
           <a class="btn btn-primary btn-lg" data-dl="windows" href="#">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg><span>Unduh untuk Windows</span>
           </a>
@@ -292,6 +298,7 @@ footer .copy{grid-column:1/-1;display:flex;justify-content:space-between;gap:16p
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Intel &amp; Apple Silicon (M1–M4)</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Koneksi internet</li>
           </ul>
+          <div class="notice" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5.5c0 4.3 3 8 7 9.5 4-1.5 7-5.2 7-9.5V6z"/><path d="m9 12 2 2 4-4"/></svg><p>Pembukaan pertama: klik kanan Dentiva di folder Applications → <b>Open</b> → <b>Open</b>.</p></div>
           <a class="btn btn-primary btn-lg" data-dl="mac" href="#">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg><span>Unduh untuk macOS</span>
           </a>
@@ -336,7 +343,8 @@ footer .copy{grid-column:1/-1;display:flex;justify-content:space-between;gap:16p
     <div class="wrap faq">
       <div class="sec-head reveal"><h2>Pertanyaan <em>seputar aplikasi desktop.</em></h2></div>
       <div>
-        <div class="qa reveal"><button aria-expanded="true">Muncul peringatan "Windows protected your PC". Apakah aman?<span class="pm" aria-hidden="true"></span></button><div class="ans"><div><p>Aman. Peringatan ini muncul untuk aplikasi baru yang belum dikenal Windows SmartScreen. Klik "More info", lalu "Run anyway". Peringatan akan hilang setelah sertifikat tanda tangan Dentiva aktif.</p></div></div></div>
+        <div class="qa reveal"><button aria-expanded="true">Chrome menulis "This file isn't commonly downloaded". Apakah berbahaya?<span class="pm" aria-hidden="true"></span></button><div class="ans"><div><p>Tidak. Peringatan ini berarti file masih jarang diunduh dan belum dikenal Chrome, bukan karena ditemukan virus. Klik <b>Download suspicious file</b> untuk melanjutkan. Di Microsoft Edge, pilih <b>Keep</b>. Peringatan akan hilang setelah installer Dentiva ditandatangani secara digital dan makin banyak diunduh.</p></div></div></div>
+        <div class="qa reveal"><button aria-expanded="false">Muncul peringatan "Windows protected your PC". Apakah aman?<span class="pm" aria-hidden="true"></span></button><div class="ans"><div><p>Aman. Peringatan ini muncul untuk aplikasi baru yang belum dikenal Windows SmartScreen. Klik "More info", lalu "Run anyway". Peringatan akan hilang setelah sertifikat tanda tangan Dentiva aktif.</p></div></div></div>
         <div class="qa reveal"><button aria-expanded="false">Mac saya tidak mau membuka aplikasinya.<span class="pm" aria-hidden="true"></span></button><div class="ans"><div><p>Pada pembukaan pertama, klik kanan ikon Dentiva di folder Applications, pilih "Open", lalu "Open" sekali lagi. Selanjutnya Dentiva bisa dibuka seperti biasa.</p></div></div></div>
         <div class="qa reveal"><button aria-expanded="false">Apa bedanya dengan versi web?<span class="pm" aria-hidden="true"></span></button><div class="ans"><div><p>Fitur dan datanya sama. Versi desktop berjalan di jendelanya sendiri tanpa tab browser, terbuka lebih cepat, dan disiapkan untuk fitur khusus komputer klinik seperti cetak thermal dan layar antrean.</p></div></div></div>
         <div class="qa reveal"><button aria-expanded="false">Di mana data pasien disimpan?<span class="pm" aria-hidden="true"></span></button><div class="ans"><div><p>Di server Dentiva yang terenkripsi, bukan di komputer. Jika komputer rusak atau hilang, data klinik tetap aman. Cukup pasang Dentiva di komputer lain dan masuk kembali.</p></div></div></div>
