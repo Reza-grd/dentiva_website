@@ -61,7 +61,8 @@ Jika aplikasi sudah pindah ke subdomain, ganti semua `https://dentiva-main.verce
 
 ## Merilis versi baru aplikasi desktop
 
-1. Unggah installer hasil build ke Supabase Storage, bucket `downloads`, dengan nama aslinya
-   (`Dentiva_<versi>_x64-setup.exe`, `Dentiva_<versi>_universal.dmg`).
-2. Di `unduh.html`, ubah `var VERSION = "1.10.0";` menjadi versi baru, lalu commit & deploy.
+1. Unggah installer hasil build ke Storage server Dentiva di Indonesia (`https://api.dentiva.id`, bucket
+   `downloads`) dengan nama aslinya (`Dentiva_<versi>_x64-setup.exe`, `Dentiva_<versi>_universal.dmg`) —
+   di server: `/opt/dentiva/bin/unggah-installer.sh <berkas>…` (lihat repo dentiva-main, `infra/vps/README.md`).
+2. Di `unduh.html`, ubah `var VERSION = "…";` menjadi versi baru, lalu commit & deploy.
    Ukuran dan tanggal berkas tampil otomatis.

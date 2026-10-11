@@ -388,10 +388,10 @@ footer .copy{grid-column:1/-1;display:flex;justify-content:space-between;gap:16p
 (function(){
   "use strict";
   /* ============ RILIS ============
-     Saat merilis versi baru: unggah installer ke Supabase Storage (bucket "downloads")
+     Saat merilis versi baru: unggah installer ke Storage server Dentiva (bucket "downloads", api.dentiva.id)
      dengan nama asli hasil build, lalu ganti VERSION di bawah. */
-  var VERSION = "1.10.0";
-  var BASE = "https://ggwratzhpukgsiduqely.supabase.co/storage/v1/object/public/downloads/";
+  var VERSION = "1.11.0";
+  var BASE = "https://api.dentiva.id/storage/v1/object/public/downloads/";
   var FILES = {
     windows: "Dentiva_" + VERSION + "_x64-setup.exe",
     mac: "Dentiva_" + VERSION + "_universal.dmg"
