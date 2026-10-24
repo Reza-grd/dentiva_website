@@ -24,7 +24,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://dentiva.id/#organization","name":"Dentiva","url":"https://dentiva.id/","logo":"https://dentiva.id/dentiva-logo.png"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://dentiva.id/#website","name":"Dentiva","alternateName":"Dentiva Indonesia","url":"https://dentiva.id/","inLanguage":"id-ID","publisher":{"@id":"https://dentiva.id/#organization"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Dentiva", "applicationCategory": "MedicalApplication", "operatingSystem": "Web, Windows, macOS", "inLanguage": "id", "url": "https://dentiva.id/", "description": "Rekam medis elektronik klinik gigi dengan odontogram digital, SOAP & ICD-10, e-resep KFA, dan integrasi SATUSEHAT.", "offers": [{"@type": "Offer", "name": "Starter", "price": "299000", "priceCurrency": "IDR", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "299000", "priceCurrency": "IDR", "unitText": "MONTH"}}, {"@type": "Offer", "name": "Pro", "price": "599000", "priceCurrency": "IDR", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "599000", "priceCurrency": "IDR", "unitText": "MONTH"}}, {"@type": "Offer", "name": "Enterprise", "price": "1499000", "priceCurrency": "IDR", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "1499000", "priceCurrency": "IDR", "unitText": "MONTH"}}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Apakah perlu memasang aplikasi di komputer klinik?", "acceptedAnswer": {"@type": "Answer", "text": "Tidak wajib. Dentiva berjalan di browser, jadi cukup dibuka lewat komputer, laptop, atau tablet. Tersedia juga aplikasi desktop untuk Windows dan macOS di dentiva.id/unduh."}}, {"@type": "Question", "name": "Apakah Dentiva mendukung SATUSEHAT?", "acceptedAnswer": {"@type": "Answer", "text": "Ya. Data kunjungan, diagnosis ICD-10, tindakan ICD-9-CM, dan resep dikirim ke SATUSEHAT dalam format FHIR."}}, {"@type": "Question", "name": "Bagaimana jika internet di klinik putus?", "acceptedAnswer": {"@type": "Answer", "text": "Draf rekam medis tetap tersimpan di perangkat dan disinkronkan otomatis saat koneksi kembali."}}, {"@type": "Question", "name": "Bagaimana keamanan data pasien?", "acceptedAnswer": {"@type": "Answer", "text": "Data medis dienkripsi AES-256 di sisi server, dipisahkan per klinik, dan hanya dapat diakses sesuai peran."}}, {"@type": "Question", "name": "Bisakah data pasien lama dipindahkan?", "acceptedAnswer": {"@type": "Answer", "text": "Bisa. Tim kami membantu memindahkan data dari spreadsheet atau sistem sebelumnya."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Apakah perlu memasang aplikasi di komputer klinik?", "acceptedAnswer": {"@type": "Answer", "text": "Tidak wajib. Dentiva berjalan di browser, jadi cukup dibuka lewat komputer, laptop, atau tablet. Tersedia juga aplikasi desktop untuk Windows dan macOS di dentiva.id/unduh."}}, {"@type": "Question", "name": "Apakah Dentiva mendukung SATUSEHAT?", "acceptedAnswer": {"@type": "Answer", "text": "Ya. Data kunjungan, diagnosis ICD-10, tindakan ICD-9-CM, dan resep dikirim ke SATUSEHAT dalam format FHIR."}}, {"@type": "Question", "name": "Bagaimana jika internet di klinik putus?", "acceptedAnswer": {"@type": "Answer", "text": "Draf rekam medis tetap tersimpan di perangkat dan disinkronkan otomatis saat koneksi kembali."}}, {"@type": "Question", "name": "Bagaimana keamanan data pasien?", "acceptedAnswer": {"@type": "Answer", "text": "Identitas pasien dan isi rekam medis dienkripsi di tingkat kolom database, dipisahkan per klinik, dan hanya dapat diakses sesuai peran."}}, {"@type": "Question", "name": "Bisakah data pasien lama dipindahkan?", "acceptedAnswer": {"@type": "Answer", "text": "Bisa. Tim kami membantu memindahkan data dari spreadsheet atau sistem sebelumnya."}}]}</script>
 <link rel="icon" href="favicon.ico?v=2" sizes="any">
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
 <link rel="manifest" href="site.webmanifest">
@@ -529,27 +529,6 @@ footer a:hover{color:var(--ink)}
 .stack-l i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
 .calc-note{font-size:13px;color:var(--ink-soft);margin-top:auto}
 
-/* legal pages */
-.legal{display:none}
-body.legal-open main,body.legal-open .band{display:none}
-body.legal-open .legal.on{display:block}
-.legal{padding:56px 0 110px}
-.legal .wrap{max-width:780px}
-.back{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--ink-soft);text-decoration:none;margin-bottom:28px}
-.back:hover{color:var(--ink)}
-.legal h1{font-size:clamp(40px,5.5vw,64px)}
-.legal .meta{margin:14px 0 36px;color:var(--ink-soft);font-size:14.5px}
-.legal .draft{padding:14px 18px;border-radius:14px;background:var(--gold-soft);color:var(--gold);font-size:14px;margin-bottom:36px}
-.legal h2{font-family:var(--body);font-weight:600;font-size:21px;letter-spacing:-.01em;line-height:1.3;margin:40px 0 12px}
-.legal p,.legal li{color:var(--ink-soft);font-size:16.5px;line-height:1.7}
-.legal p+p{margin-top:12px}
-.legal ul{padding-left:22px;margin:10px 0}
-.legal li{margin-bottom:6px}
-.legal strong{color:var(--ink);font-weight:600}
-.legal table{width:100%;border-collapse:collapse;font-size:15px;margin:12px 0}
-.legal th,.legal td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
-.legal th{color:var(--ink);font-weight:600;font-size:14px}
-.legal td{color:var(--ink-soft)}
 .tbl{overflow-x:auto}
 .consent{font-size:12.5px;color:var(--ink-soft);margin-top:-4px}
 .consent a{color:var(--blue)}
@@ -1024,7 +1003,7 @@ body.legal-open .legal.on{display:block}
         <p>Rekam medis adalah data paling sensitif di klinik. Dentiva dibangun dengan keamanan sebagai fondasi, bukan tambahan.</p>
       </div>
       <div class="secg">
-        <div class="sc reveal" style="--d:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><h3>Enkripsi AES-256</h3><p>Data medis dienkripsi di sisi server sebelum disimpan ke database.</p></div>
+        <div class="sc reveal" style="--d:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><h3>Enkripsi data pasien</h3><p>Identitas pasien dan isi rekam medis dienkripsi di server sebelum disimpan ke database.</p></div>
         <div class="sc reveal" style="--d:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg><h3>Isolasi data per klinik</h3><p>Setiap klinik hanya dapat melihat datanya sendiri, dijaga langsung di tingkat database.</p></div>
         <div class="sc reveal" style="--d:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.3-5.5 6.5-5.5s5.7 2 6.5 5.5M17 11l2 2 4-4"/></svg><h3>Hak akses per peran</h3><p>Dokter, resepsionis, dan admin punya izin yang berbeda dan dapat diatur.</p></div>
         <div class="sc reveal" style="--d:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 8v4l3 2"/><path d="M3.5 12a8.5 8.5 0 1 0 2.5-6M3 3v4h4"/></svg><h3>Audit log & versi</h3><p>Setiap perubahan rekam medis tercatat siapa dan kapan, dengan riwayat versi yang bisa dibandingkan.</p></div>
@@ -1120,7 +1099,7 @@ body.legal-open .legal.on{display:block}
         <div class="qa reveal"><button aria-expanded="true">Apakah perlu memasang aplikasi di komputer klinik?<span class="pm" aria-hidden="true"></span></button><div class="ans"><div><p>Tidak wajib. Dentiva berjalan di browser, jadi cukup dibuka lewat komputer, laptop, atau tablet, dan tampilannya menyesuaikan layar ponsel. Untuk komputer klinik tersedia juga <a href="/unduh">aplikasi desktop Windows &amp; macOS</a>.</p></div></div></div>
         <div class="qa reveal"><button aria-expanded="false">Apakah Dentiva mendukung SATUSEHAT?<span class="pm" aria-hidden="true"></span></button><div class="ans"><div><p>Ya. Data kunjungan, diagnosis ICD-10, tindakan ICD-9-CM, dan resep dikirim ke SATUSEHAT dalam format FHIR. Klinik cukup memasukkan kredensial SATUSEHAT milik klinik di pengaturan.</p></div></div></div>
         <div class="qa reveal"><button aria-expanded="false">Bagaimana jika internet di klinik putus?<span class="pm" aria-hidden="true"></span></button><div class="ans"><div><p>Draf rekam medis tetap tersimpan di perangkat dan disinkronkan otomatis saat koneksi kembali. Pengiriman ke SATUSEHAT juga dicoba ulang secara terjadwal.</p></div></div></div>
-        <div class="qa reveal"><button aria-expanded="false">Bagaimana keamanan data pasien?<span class="pm" aria-hidden="true"></span></button><div class="ans"><div><p>Data medis dienkripsi AES-256 di sisi server, dipisahkan per klinik, dan hanya dapat diakses sesuai peran. Setiap perubahan tercatat di audit log.</p></div></div></div>
+        <div class="qa reveal"><button aria-expanded="false">Bagaimana keamanan data pasien?<span class="pm" aria-hidden="true"></span></button><div class="ans"><div><p>Identitas pasien dan isi rekam medis dienkripsi di tingkat kolom database, dipisahkan per klinik, dan hanya dapat diakses sesuai peran. Setiap perubahan tercatat di audit log.</p></div></div></div>
         <div class="qa reveal"><button aria-expanded="false">Bisakah data pasien lama dipindahkan?<span class="pm" aria-hidden="true"></span></button><div class="ans"><div><p>Bisa. Tim kami membantu memindahkan data dari spreadsheet atau sistem sebelumnya saat proses pemasangan.</p></div></div></div>
       </div>
     </div>
@@ -1141,7 +1120,7 @@ body.legal-open .legal.on{display:block}
             <select name="paket" id="paketSel"><option>Belum tahu</option><option>Starter</option><option>Pro</option><option>Enterprise</option></select>
           </label>
           <button class="btn btn-primary" type="submit"><span>Kirim lewat WhatsApp</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-          <p class="consent">Dengan mengirim, Anda menyetujui <a href="#kebijakan-privasi">Kebijakan Privasi</a> Dentiva.</p>
+          <p class="consent">Dengan mengirim, Anda menyetujui <a href="/privacy-policy">Kebijakan Privasi</a> Dentiva.</p>
           <p class="form-msg" id="formMsg" role="status"></p>
         </form>
       </div>
@@ -1149,166 +1128,19 @@ body.legal-open .legal.on{display:block}
   </div>
 </main>
 
-<!-- ============ KEBIJAKAN PRIVASI ============ -->
-<article class="legal" id="kebijakan-privasi" aria-labelledby="kpTitle">
-  <div class="wrap">
-    <a class="back" href="#top"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Kembali ke beranda</a>
-    <h1 id="kpTitle">Kebijakan Privasi</h1>
-    <p class="meta">Berlaku sejak [tanggal berlaku] · Versi 1.0</p>
-    <p class="draft">Draf. Harap ditinjau oleh konsultan hukum sebelum dipublikasikan, dan lengkapi semua bagian bertanda [kurung siku].</p>
-
-    <h2>1. Tentang kebijakan ini</h2>
-    <p>Kebijakan ini menjelaskan bagaimana [NAMA BADAN USAHA] ("Dentiva", "kami") mengumpulkan, menggunakan, menyimpan, dan melindungi data pribadi melalui situs dentiva.id dan aplikasi Dentiva. Kebijakan ini disusun dengan mengacu pada Undang-Undang No. 27 Tahun 2022 tentang Pelindungan Data Pribadi (UU PDP) dan Peraturan Menteri Kesehatan No. 24 Tahun 2022 tentang Rekam Medis.</p>
-
-    <h2>2. Peran kami atas data</h2>
-    <p>Peran Dentiva berbeda tergantung jenis datanya:</p>
-    <div class="tbl"><table>
-      <thead><tr><th>Jenis data</th><th>Pengendali data</th><th>Peran Dentiva</th></tr></thead>
-      <tbody>
-        <tr><td>Data pasien dan rekam medis yang dimasukkan klinik</td><td>Klinik pengguna Dentiva</td><td>Prosesor data, memproses atas instruksi klinik</td></tr>
-        <tr><td>Data akun staf klinik dan data langganan</td><td>Dentiva</td><td>Pengendali data</td></tr>
-        <tr><td>Data pengunjung situs dan formulir demo</td><td>Dentiva</td><td>Pengendali data</td></tr>
-      </tbody>
-    </table></div>
-    <p>Pasien yang ingin mengakses, memperbaiki, atau meminta salinan rekam medisnya dapat menghubungi klinik tempat ia berobat. Kami akan membantu klinik memenuhi permintaan tersebut.</p>
-
-    <h2>3. Data yang kami kumpulkan</h2>
-    <ul>
-      <li><strong>Pengunjung situs:</strong> nama, nama klinik, dan paket yang diminati saat Anda mengisi formulir demo. Data ini dikirim melalui WhatsApp ke tim kami.</li>
-      <li><strong>Pengguna aplikasi:</strong> nama, alamat email, peran (dokter, resepsionis, admin), data profil praktik seperti nomor STR, serta catatan aktivitas di aplikasi (audit log).</li>
-      <li><strong>Klinik:</strong> profil klinik, pengaturan, dan data tagihan langganan.</li>
-      <li><strong>Pasien (diproses atas nama klinik):</strong> identitas, alamat, nomor telepon, riwayat medis, alergi, odontogram, diagnosis, tindakan, resep, foto klinis dan radiologi, informed consent, serta data pembayaran.</li>
-    </ul>
-    <p>Data kesehatan termasuk data pribadi yang bersifat spesifik menurut UU PDP, sehingga kami memberikan perlindungan tambahan sebagaimana dijelaskan di bagian 6.</p>
-
-    <h2>4. Tujuan penggunaan</h2>
-    <ul>
-      <li>Menyediakan layanan rekam medis elektronik dan fitur-fitur Dentiva kepada klinik.</li>
-      <li>Mengirim data kunjungan ke platform SATUSEHAT Kementerian Kesehatan atas instruksi klinik dan sesuai kewajiban peraturan.</li>
-      <li>Mengirim pengingat janji temu dan edukasi pasca tindakan melalui WhatsApp kepada pasien yang telah memberikan persetujuan.</li>
-      <li>Memproses pembayaran langganan klinik.</li>
-      <li>Menjaga keamanan, mendeteksi gangguan teknis, dan meningkatkan layanan.</li>
-      <li>Menanggapi permintaan demo dan pertanyaan Anda.</li>
-    </ul>
-    <p>Kami tidak menjual data pribadi dan tidak menggunakan data pasien untuk iklan.</p>
-
-    <h2>5. Pihak ketiga yang membantu kami</h2>
-    <p>Kami menggunakan penyedia layanan berikut untuk menjalankan Dentiva. Masing-masing hanya menerima data yang diperlukan untuk fungsinya:</p>
-    <div class="tbl"><table>
-      <thead><tr><th>Penyedia</th><th>Fungsi</th></tr></thead>
-      <tbody>
-        <tr><td>Supabase</td><td>Database, autentikasi, dan penyimpanan file</td></tr>
-        <tr><td>Vercel</td><td>Hosting situs dan aplikasi</td></tr>
-        <tr><td>Whapi.cloud</td><td>Pengiriman pesan WhatsApp</td></tr>
-        <tr><td>Midtrans</td><td>Pemrosesan pembayaran langganan</td></tr>
-        <tr><td>Sentry</td><td>Pemantauan kesalahan teknis</td></tr>
-        <tr><td>Kementerian Kesehatan RI (SATUSEHAT)</td><td>Penerima data rekam medis sesuai kewajiban peraturan</td></tr>
-      </tbody>
-    </table></div>
-    <p>Data disimpan di server yang berlokasi di [lokasi server/region]. Apabila data ditransfer ke luar wilayah Indonesia, kami memastikan perlindungan yang setara sesuai ketentuan UU PDP.</p>
-
-    <h2>6. Keamanan data</h2>
-    <ul>
-      <li>Data medis dienkripsi dengan AES-256 di sisi server sebelum disimpan.</li>
-      <li>Data setiap klinik dipisahkan di tingkat database, sehingga satu klinik tidak dapat mengakses data klinik lain.</li>
-      <li>Akses dibatasi berdasarkan peran. Data klinis hanya dapat dibuka oleh tenaga medis yang berwenang.</li>
-      <li>Setiap perubahan rekam medis dicatat dalam audit log dan riwayat versi.</li>
-      <li>Kredensial layanan pihak ketiga, termasuk SATUSEHAT, disimpan di server dan tidak pernah dikirim ke browser.</li>
-    </ul>
-
-    <h2>7. Masa penyimpanan</h2>
-    <p>Data akun dan langganan disimpan selama klinik berlangganan, lalu [jangka waktu] setelah langganan berakhir untuk keperluan administrasi dan hukum. Rekam medis disimpan sesuai masa retensi yang diatur klinik dan ketentuan Permenkes No. 24 Tahun 2022. Saat langganan berakhir, klinik dapat mengekspor seluruh datanya sebelum data dihapus dalam waktu [jumlah] hari.</p>
-
-    <h2>8. Hak Anda</h2>
-    <p>Sesuai UU PDP, Anda berhak untuk mengakses, memperbaiki, memperoleh salinan, meminta penghapusan, membatasi pemrosesan, dan menarik persetujuan atas data pribadi Anda. Untuk data pasien, permintaan diajukan melalui klinik. Untuk data lainnya, hubungi kami melalui kontak di bagian 11. Kami akan menanggapi dalam waktu [jumlah] hari kerja.</p>
-
-    <h2>9. Cookie</h2>
-    <p>Situs dentiva.id saat ini tidak menggunakan cookie pelacak atau iklan. Aplikasi Dentiva menggunakan penyimpanan lokal di perangkat untuk menjaga sesi login dan menyimpan draf rekam medis saat offline.</p>
-
-    <h2>10. Insiden keamanan</h2>
-    <p>Apabila terjadi kegagalan pelindungan data pribadi, kami akan memberitahukan klinik terkait dan pihak berwenang paling lambat 3 × 24 jam sesuai ketentuan UU PDP, beserta langkah penanganan yang kami ambil.</p>
-
-    <h2>11. Kontak</h2>
-    <p>[NAMA BADAN USAHA]<br>[Alamat lengkap kantor]<br>Email: halo@dentiva.id<br>Pejabat pelindungan data: [nama dan email, jika ada]</p>
-
-    <h2>12. Perubahan kebijakan</h2>
-    <p>Kami dapat memperbarui kebijakan ini dari waktu ke waktu. Perubahan penting akan diumumkan melalui aplikasi atau email kepada admin klinik sebelum berlaku.</p>
-  </div>
-</article>
-
-<!-- ============ SYARAT & KETENTUAN ============ -->
-<article class="legal" id="syarat-ketentuan" aria-labelledby="skTitle">
-  <div class="wrap">
-    <a class="back" href="#top"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Kembali ke beranda</a>
-    <h1 id="skTitle">Syarat & Ketentuan</h1>
-    <p class="meta">Berlaku sejak [tanggal berlaku] · Versi 1.0</p>
-    <p class="draft">Draf. Harap ditinjau oleh konsultan hukum sebelum dipublikasikan, dan lengkapi semua bagian bertanda [kurung siku].</p>
-
-    <h2>1. Penerimaan</h2>
-    <p>Dengan mendaftar atau menggunakan Dentiva, klinik dan penggunanya ("Anda") menyetujui Syarat & Ketentuan ini serta <a href="#kebijakan-privasi">Kebijakan Privasi</a> kami. Layanan ini disediakan oleh [NAMA BADAN USAHA].</p>
-
-    <h2>2. Layanan</h2>
-    <p>Dentiva adalah perangkat lunak berbasis web untuk rekam medis elektronik dan manajemen klinik gigi, termasuk odontogram, rekam medis SOAP, e-resep, jadwal, antrean, pembayaran, stok, laporan, pengingat WhatsApp, dan integrasi SATUSEHAT. Fitur yang tersedia bergantung pada paket langganan.</p>
-
-    <h2>3. Akun dan tanggung jawab klinik</h2>
-    <ul>
-      <li>Klinik bertanggung jawab atas akun staf yang dibuatnya, termasuk menjaga kerahasiaan kata sandi dan mencabut akses staf yang tidak lagi bekerja.</li>
-      <li>Klinik bertanggung jawab atas kebenaran data yang dimasukkan dan atas perolehan persetujuan pasien yang diperlukan, termasuk persetujuan untuk menerima pesan WhatsApp.</li>
-      <li>Klinik bertanggung jawab memasukkan kredensial SATUSEHAT yang sah milik klinik.</li>
-    </ul>
-
-    <h2>4. Bukan pengganti penilaian klinis</h2>
-    <p>Dentiva adalah alat bantu pencatatan dan administrasi. Seluruh keputusan diagnosis, tindakan, dan pengobatan tetap menjadi tanggung jawab tenaga medis.</p>
-
-    <h2>5. Langganan dan pembayaran</h2>
-    <ul>
-      <li>Langganan tersedia dalam periode bulanan atau tahunan, dengan harga sesuai paket yang tercantum di situs pada saat pembelian.</li>
-      <li>Setiap paket memiliki batas jumlah pengguna dan pasien. Klinik dapat naik paket kapan saja.</li>
-      <li>Pembayaran diproses melalui Midtrans. Langganan diperpanjang sesuai periode yang dipilih kecuali dibatalkan sebelum periode berakhir.</li>
-      <li>Apabila pembayaran terlambat, akses dapat dibatasi setelah [jumlah] hari. Data klinik tetap tersimpan selama masa tersebut.</li>
-      <li>Kebijakan pengembalian dana: [jelaskan kebijakan refund].</li>
-    </ul>
-
-    <h2>6. Kepemilikan data</h2>
-    <p>Data pasien dan rekam medis adalah milik klinik dan pasien sesuai peraturan yang berlaku. Dentiva tidak memiliki hak atas data tersebut dan hanya memprosesnya untuk menyediakan layanan. Klinik dapat mengekspor datanya kapan saja.</p>
-
-    <h2>7. Penggunaan yang dilarang</h2>
-    <ul>
-      <li>Mengakses data klinik lain atau mencoba menembus sistem keamanan.</li>
-      <li>Menggunakan layanan untuk tujuan yang melanggar hukum.</li>
-      <li>Mengirim pesan WhatsApp massal yang tidak berkaitan dengan layanan kesehatan pasien.</li>
-      <li>Menyalin, memodifikasi, atau menjual kembali perangkat lunak Dentiva tanpa izin tertulis.</li>
-    </ul>
-
-    <h2>8. Ketersediaan layanan</h2>
-    <p>Kami berupaya menjaga layanan tersedia setiap saat, namun tidak dapat menjamin bebas gangguan. Pemeliharaan terjadwal akan diberitahukan terlebih dahulu bila memungkinkan. Fitur yang bergantung pada pihak ketiga, seperti SATUSEHAT dan WhatsApp, mengikuti ketersediaan layanan pihak tersebut.</p>
-
-    <h2>9. Batasan tanggung jawab</h2>
-    <p>Sejauh diizinkan hukum, tanggung jawab [NAMA BADAN USAHA] atas kerugian yang timbul dari penggunaan layanan terbatas pada jumlah biaya langganan yang dibayarkan klinik dalam [jumlah] bulan terakhir.</p>
-
-    <h2>10. Penghentian</h2>
-    <p>Klinik dapat berhenti berlangganan kapan saja. Kami dapat menangguhkan akun yang melanggar ketentuan ini. Setelah langganan berakhir, klinik memiliki waktu [jumlah] hari untuk mengekspor data sebelum data dihapus.</p>
-
-    <h2>11. Hukum yang berlaku</h2>
-    <p>Ketentuan ini tunduk pada hukum Republik Indonesia. Sengketa diselesaikan secara musyawarah terlebih dahulu, dan bila tidak tercapai, melalui [Pengadilan Negeri / lembaga arbitrase yang dipilih].</p>
-
-    <h2>12. Perubahan dan kontak</h2>
-    <p>Kami dapat mengubah ketentuan ini dengan pemberitahuan kepada admin klinik. Pertanyaan dapat dikirim ke halo@dentiva.id.</p>
-  </div>
-</article>
 
 <footer>
   <div class="wrap">
     <div>
       <a class="brand" href="#top" style="margin-bottom:14px"><span class="logo" aria-hidden="true"></span>Dentiva</a>
       <p style="max-width:38ch">Rekam medis elektronik dan manajemen klinik gigi, terintegrasi SATUSEHAT.</p>
-      <p class="ident">Dikelola oleh <strong>[NAMA BADAN USAHA]</strong><br>[Alamat lengkap kantor], Medan, Sumatera Utara<br>NIB [nomor NIB]</p>
+      <p class="ident">Dikelola oleh <strong>PT Dentiva Teknologi Nusantara</strong><br>Banda Aceh, Aceh, Indonesia</p>
     </div>
     <div><h4>Produk</h4><ul><li><a href="#odontogram">Odontogram</a></li><li><a href="#fitur">Fitur</a></li><li><a href="#paket">Harga</a></li><li><a href="/unduh">Unduh aplikasi</a></li><li><a href="https://dentiva-main.vercel.app">Masuk aplikasi</a></li></ul></div>
-    <div><h4>Bantuan</h4><ul><li><a href="#faq">FAQ</a></li><li><a href="#regulasi">Regulasi RME</a></li><li><a href="#kebijakan-privasi">Kebijakan Privasi</a></li><li><a href="#syarat-ketentuan">Syarat & Ketentuan</a></li></ul></div>
+    <div><h4>Bantuan</h4><ul><li><a href="#faq">FAQ</a></li><li><a href="#regulasi">Regulasi RME</a></li><li><a href="/privacy-policy">Kebijakan Privasi</a></li><li><a href="/terms-of-service">Syarat Layanan</a></li><li><a href="/data-deletion">Penghapusan Data</a></li></ul></div>
     <div><h4>Kontak</h4><ul><li><a href="mailto:halo@dentiva.id">halo@dentiva.id</a></li><li><a href="#" data-wa>WhatsApp [nomor]</a></li><li>Senin–Sabtu, 08.00–17.00 WIB</li></ul></div>
     <div class="big" aria-hidden="true">Dentiva</div>
-    <div class="copy"><span>© <span id="yr"></span> [NAMA BADAN USAHA]. Dentiva adalah merek dagang milik [NAMA BADAN USAHA].</span><span><a href="#kebijakan-privasi">Privasi</a> · <a href="#syarat-ketentuan">Syarat</a></span></div>
+    <div class="copy"><span>© <span id="yr"></span> PT Dentiva Teknologi Nusantara. Dentiva adalah merek dagang milik PT Dentiva Teknologi Nusantara.</span><span><a href="/privacy-policy">Privasi</a> · <a href="/terms-of-service">Syarat</a> · <a href="/data-deletion">Penghapusan Data</a></span></div>
   </div>
 </footer>
 
@@ -1686,16 +1518,9 @@ body.legal-open .legal.on{display:block}
   $(".calc").addEventListener("input",function(e){if(e.target.matches(".cost,#cTarif,#cOver")){var pos=e.target.value.length;fmt(e.target)}calc()});
   loadPreset(0);
 
-  /* ================= HALAMAN LEGAL (hash) ================= */
-  var LEGAL=["kebijakan-privasi","syarat-ketentuan"];
-  function route(){
-    var h=location.hash.slice(1),isL=LEGAL.indexOf(h)>-1;
-    document.body.classList.toggle("legal-open",isL);
-    $$(".legal").forEach(function(a){a.classList.toggle("on",a.id===h)});
-    if(isL){scrollTo(0,0);document.title=(h==="kebijakan-privasi"?"Kebijakan Privasi":"Syarat & Ketentuan")+" — Dentiva";var t=$("#"+h+" h1");t.setAttribute("tabindex","-1");t.focus({preventScroll:true})}
-    else{document.title="Dentiva — Aplikasi Rekam Medis Elektronik Klinik Gigi | Terintegrasi SATUSEHAT";if(route.wasLegal&&h){var el=document.getElementById(h);if(el)requestAnimationFrame(function(){el.scrollIntoView()})}}
-    route.wasLegal=isL;
-  }
+  /* Tautan lama (#kebijakan-privasi, #syarat-ketentuan) dialihkan ke halaman legal tersendiri */
+  var LEGAL={"kebijakan-privasi":"/privacy-policy","syarat-ketentuan":"/terms-of-service"};
+  function route(){var to=LEGAL[location.hash.slice(1)];if(to)location.replace(to)}
   addEventListener("hashchange",route);route();
   $$('[data-wa]').forEach(function(a){a.href="https://wa.me/"+WA_NUMBER;a.target="_blank";a.rel="noopener"});
 

@@ -1,0 +1,83 @@
+/* Halaman legal Dentiva (privacy-policy, terms-of-service, data-deletion). Token disalin dari index.html. */
+:root{
+  --bg:#F5F6F8; --surface:#FFFFFF; --ink:#0F2238; --ink-soft:#4B5B70; --line:#E0E5EC;
+  --navy:#183858; --deep:#0F2842; --blue:#3F5E96; --blue-soft:#E4EBF6;
+  --gold:#94702F; --gold-soft:#F4ECDA; --gold-bright:#D9B76E;
+  --display:"Newsreader","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --body:"Onest","Segoe UI",system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#09131F; --surface:#0F1D2E; --ink:#E8EDF3; --ink-soft:#9AA8B8; --line:#1F3047;
+    --navy:#9DB6E4; --deep:#0B1B2E; --blue:#86A5DE; --blue-soft:#17294A;
+    --gold:#D9B76E; --gold-soft:#2A2314; --gold-bright:#E4C98C;
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:8px}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+p{margin:0}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-size:26px;letter-spacing:-.02em}
+.brand img{width:36px;height:36px;border-radius:50%}
+.nav-links{display:flex;gap:24px;font-size:15px}
+.nav-links a{text-decoration:none;color:var(--ink-soft)}
+.nav-links a:hover,.nav-links a[aria-current]{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 20px;border-radius:999px;font:600 15px/1 var(--body);text-decoration:none;background:#183858;color:#fff;white-space:nowrap}
+.btn:hover{background:#3F5E96}
+
+/* isi */
+.legal{padding:48px 0 96px}
+.legal .wrap{max-width:780px}
+.crumb{font-size:14px;color:var(--ink-soft);margin-bottom:22px}
+.crumb a{text-decoration:none}
+.crumb a:hover{color:var(--ink)}
+.legal h1{font-family:var(--display);font-weight:400;font-size:clamp(38px,6vw,60px);line-height:1.05;letter-spacing:-.025em;margin:0}
+.legal .meta{margin:14px 0 28px;color:var(--ink-soft);font-size:14.5px}
+.legal .lede{font-size:18px;color:var(--ink-soft);margin-bottom:12px}
+.legal h2{font-weight:600;font-size:21px;letter-spacing:-.01em;line-height:1.3;margin:40px 0 12px;scroll-margin-top:90px}
+.legal h3{font-weight:600;font-size:17px;margin:24px 0 8px}
+.legal p,.legal li{color:var(--ink-soft);font-size:16.5px;line-height:1.7}
+.legal p+p{margin-top:12px}
+.legal ul,.legal ol{padding-left:22px;margin:10px 0}
+.legal li{margin-bottom:6px}
+.legal strong{color:var(--ink);font-weight:600}
+.legal a{color:var(--blue)}
+.tbl{overflow-x:auto;margin:12px 0}
+.legal table{width:100%;border-collapse:collapse;font-size:15px}
+.legal th,.legal td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.legal th{color:var(--ink);font-weight:600;font-size:14px}
+.legal td{color:var(--ink-soft)}
+.box{margin:20px 0;padding:16px 18px;border:1px solid var(--line);border-left:3px solid var(--gold-bright);border-radius:14px;background:var(--surface)}
+.box p{font-size:15.5px}
+.toc{margin:8px 0 8px;padding:18px 22px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+.toc ol{margin:0;columns:2;column-gap:28px;font-size:15px}
+.toc li{break-inside:avoid;font-size:15px}
+.toc a{text-decoration:none;color:var(--ink-soft)}
+.toc a:hover{color:var(--ink)}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:48px 0 56px;font-size:14.5px;color:var(--ink-soft)}
+footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px}
+footer h4{margin:0 0 12px;color:var(--ink);font-size:14.5px}
+footer ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--ink)}
+footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:20px;margin-top:8px}
+
+@media (max-width:900px){
+  .nav-links{display:none}
+  footer .wrap{grid-template-columns:1fr 1fr}
+  .toc ol{columns:1}
+}
+@media (max-width:520px){
+  footer .wrap{grid-template-columns:1fr}
+  .brand{font-size:23px}
+  .btn{padding:0 14px;font-size:14px}
+}
+@media print{.nav,footer,.toc{display:none}.legal{padding:0}}
