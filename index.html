@@ -649,17 +649,7 @@ footer a:hover{color:var(--ink)}
 .hx-st.done{background:#DDF2E6;color:#1E7A4E}
 .hx-card{border:1px solid #E6EAF0;border-radius:14px;padding:11px 12px;background:#fff}
 .hx-card h4{margin:0 0 8px;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:#7A889A;display:flex;justify-content:space-between}
-.hx-odo svg{display:block;width:100%;height:auto}
-.hx-odo rect{fill:#F3F5F8;stroke:#C9D2DE;stroke-width:1;transition:fill .5s var(--ease),stroke .5s}
-.hx-odo rect.car{fill:#FEE2E2;stroke:#EF4444;stroke-width:2}
-.hx-odo rect.amf{fill:#9CA3AF;stroke:#6B7280}
-.hx-odo rect.cof{fill:#BFDBFE;stroke:#3B82F6}
-.hx-odo rect.mis{fill:#FDECEC;stroke:#F3B4B4}
-.hx-odo line{stroke:#E11D48;stroke-width:2;opacity:0;transition:opacity .4s}
-.hx-odo line.on{opacity:1}
-.hx-odo .hl{animation:hxPulse 1s var(--ease)}
 @keyframes hxPulse{40%{transform:scale(1.25)}}
-.hx-odo rect{transform-box:fill-box;transform-origin:center}
 .hx-soap{display:grid;gap:7px}
 .hx-soap div{display:grid;grid-template-columns:20px 1fr;align-items:center;gap:8px;font-size:12px}
 .hx-soap b{display:grid;place-items:center;width:20px;height:20px;border-radius:6px;background:#0F2842;color:#E4C98C;font-size:11px}
@@ -841,6 +831,37 @@ footer a:hover{color:var(--ink)}
   .move-steps li{padding:22px;gap:16px}
   .move-steps .mn{font-size:36px}
 }
+
+/* hero: odontogram asli */
+.ht-row{display:grid;grid-template-columns:repeat(16,1fr);gap:2px}
+.ht{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:0}
+.ht.mid{margin-left:5px}
+.ht b{font-size:8.5px;font-weight:600;color:#8592A3;line-height:1}
+.ht svg{width:100%;height:auto;display:block;overflow:visible}
+.ht.hit svg{animation:htHit .9s var(--ease)}
+@keyframes htHit{0%{transform:scale(1)}35%{transform:scale(1.35);filter:drop-shadow(0 4px 8px rgba(228,201,140,.9))}100%{transform:scale(1)}}
+.ht-occ{height:1px;margin:7px 0;background:repeating-linear-gradient(90deg,#D3DAE4 0 5px,transparent 5px 9px)}
+.hx-finds{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:5px;min-height:84px}
+.hx-finds li{display:grid;grid-template-columns:10px 26px 1fr;align-items:center;gap:7px;padding:5px 8px;border-radius:8px;background:#F5F7FA;font-size:11.5px}
+.hx-finds li.new{animation:htIn .5s var(--ease);background:#FFF8EA}
+@keyframes htIn{from{opacity:0;transform:translateY(-6px)}}
+.hx-finds i{width:10px;height:10px;border-radius:3px;border:1px solid rgba(0,0,0,.15)}
+.hx-finds b{font-weight:700}
+.hx-finds span{color:#5B6B7F;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hx-soap p{margin:0;font-size:12px;line-height:1.45;color:#2B3A4E;min-height:1.45em}
+.hx-soap p.typing::after{content:"";display:inline-block;width:1.5px;height:1em;margin-left:1px;vertical-align:-2px;background:#3F5E96;animation:blink .8s steps(2) infinite}
+.hx-soap div{align-items:start}
+
+/* hero: mockup lebih besar agar detail permukaan gigi terbaca */
+.hx-body{grid-template-columns:40px 1fr}
+@media (max-width:640px){.hx-body{grid-template-columns:1fr}.ht b{font-size:7px}.ht-row{gap:1px}.ht.mid{margin-left:3px}}
+.hx-side i{width:18px;height:18px;border-radius:6px}
+@media (min-width:1200px){
+  .hx-in{grid-template-columns:1fr 1fr;gap:40px}
+  .hx-stage{margin-right:max(calc((1200px - 100vw) / 2 + 24px),-140px)}
+  .hx-chip.c2{right:12px}
+  .hx-chip.c3{right:8px}
+}
 </style>
 </head>
 <body>
@@ -907,9 +928,9 @@ footer a:hover{color:var(--ink)}
             <div class="hx-side"><i class="on"></i><i></i><i></i><i></i><i></i></div>
             <div class="hx-main">
               <div class="hx-pt"><div class="av">SR</div><div><b>Siti Rahmawati</b><span>RM 000248 · Kunjungan ke-3</span></div><span class="hx-st" id="hxSt">Pemeriksaan</span></div>
-              <div class="hx-card hx-odo"><h4><span>Odontogram</span><span id="hxCnt">0 temuan</span></h4><svg id="hxOdo" viewBox="0 0 328 60"></svg></div>
-              <div class="hx-card"><h4><span>Catatan SOAP</span><span>dr. gigi</span></h4>
-                <div class="hx-soap"><div><b>S</b><span style="width:86%"></span></div><div><b>O</b><span style="width:72%"></span></div><div><b>A</b><span style="width:58%"></span></div><div><b>P</b><span style="width:80%"></span></div></div>
+              <div class="hx-card hx-odo"><h4><span>Odontogram</span><span id="hxCnt">0 temuan</span></h4><div class="ht-row" id="hxUp"></div><div class="ht-occ"></div><div class="ht-row lo" id="hxLo"></div><ul class="hx-finds" id="hxFinds"></ul></div>
+              <div class="hx-card"><h4><span>Catatan SOAP</span><span>drg. Ani</span></h4>
+                <div class="hx-soap"><div><b>S</b><p data-t="Ngilu gigi kiri bawah saat minum dingin, sejak ±2 minggu."></p></div><div><b>O</b><p data-t="36 karies dentin mesio-oklusal, sondasi (+), perkusi (−)."></p></div><div><b>A</b><p data-t="K02.1 Karies dentin gigi 36."></p></div><div><b>P</b><p data-t="Tumpatan komposit 36 (ICD-9-CM 23.2), kontrol 6 bulan."></p></div></div>
               </div>
               <div class="hx-ft"><span class="hx-icd" id="hxIcd">K02.1 · Karies dentin</span><span class="hx-total" id="hxTotal">Rp 0</span></div>
             </div>
@@ -1880,7 +1901,8 @@ footer a:hover{color:var(--ink)}
 })();
 </script>
 <script>
-/* Hero sinematik: navigasi gelap, mockup aplikasi yang "hidup", kemiringan mengikuti kursor, angka naik. */
+/* Hero sinematik: navigasi gelap, mockup rekam medis dengan odontogram ASLI Dentiva (geometri & kode warna
+   dari Tooth.jsx / OdontogramData.js), SOAP yang terketik, kemiringan mengikuti kursor, angka naik. */
 (function(){
   "use strict";
   var hx=document.getElementById("beranda");
@@ -1891,24 +1913,75 @@ footer a:hover{color:var(--ink)}
   function navState(){ nav.classList.toggle("on-dark", hx.getBoundingClientRect().bottom>nav.offsetHeight+24); }
   addEventListener("scroll",navState,{passive:true}); navState();
 
-  // ── odontogram mini ──
-  var NS="http://www.w3.org/2000/svg", svg=document.getElementById("hxOdo"), teeth={};
-  var UP=[18,17,16,15,14,13,12,11,21,22,23,24,25,26,27,28], LO=[48,47,46,45,44,43,42,41,31,32,33,34,35,36,37,38];
-  function row(list,y){ list.forEach(function(n,i){
-    var x=2+i*20+(i>7?4:0), r=document.createElementNS(NS,"rect");
-    r.setAttribute("x",x); r.setAttribute("y",y); r.setAttribute("width",17); r.setAttribute("height",24); r.setAttribute("rx",5);
-    svg.appendChild(r); teeth[n]={r:r,x:x,y:y};
-  }); }
-  row(UP,2); row(LO,34);
-  var miss=[];
-  ["M","N"].forEach(function(k,i){ var t=teeth[18], l=document.createElementNS(NS,"line");
-    l.setAttribute("x1",t.x+3); l.setAttribute("x2",t.x+14); l.setAttribute("y1",i?t.y+21:t.y+3); l.setAttribute("y2",i?t.y+3:t.y+21);
-    svg.appendChild(l); miss.push(l); });
+  // ── geometri & warna gigi (sama dengan demo odontogram & aplikasi) ──
+  var REND={ amf:{fill:"#9CA3AF"}, cof:{fill:"#DBEAFE",pat:1}, car:{fill:"#FEE2E2",st:"#EF4444",sw:6},
+             mis:{wf:"#FEE2E2",x:1}, fmc:{wf:"#9CA3AF"} };
+  var NAMA={ amf:"Tambalan amalgam", cof:"Tambalan komposit", car:"Karies", mis:"Hilang (dicabut)", fmc:"Mahkota logam" };
+  var SL={M:"Mesial",D:"Distal",B:"Bukal",L:"Lingual",O:"Oklusal",MO:"Mesio-oklusal",DO:"Disto-oklusal"};
+  function q(n){return Math.floor(n/10)}
+  function ttype(n){var u=n%10;if(u<=3)return "incisor";if(u<=5)return "premolar";return "molar"}
+  function isUpper(n){var Q=q(n);return Q===1||Q===2}
+  function mesR(n){var Q=q(n);return Q===1||Q===4}
+  function surfs(n){
+    var mr=mesR(n),up=isUpper(n),L=mr?"D":"M",R=mr?"M":"D",T=up?"B":"L",B=up?"L":"B",ty=ttype(n);
+    if(ty==="incisor")return[[T,"0,0 100,0 50,50"],[R,"100,0 100,100 50,50"],[B,"100,100 0,100 50,50"],[L,"0,100 0,0 50,50"]];
+    var s=[[T,"0,0 100,0 72,28 28,28"],[R,"100,0 100,100 72,72 72,28"],[B,"100,100 0,100 28,72 72,72"],[L,"0,100 0,0 28,28 28,72"]];
+    if(ty==="premolar")s.push(["O","28,28 72,28 72,72 28,72"]);
+    else{var LO=mr?"DO":"MO",RO=mr?"MO":"DO";s.push([LO,"28,28 50,28 50,72 28,72"]);s.push([RO,"50,28 72,28 72,72 50,72"])}
+    return s;
+  }
+  var state={}, el={};
+  function svg(n){
+    var c=state[n]||{s:{}},w=c.w?REND[c.w]:null,h;
+    if(w&&w.x) return '<rect x="0" y="0" width="100" height="100" rx="2" fill="'+w.wf+'" stroke="#6B7280" stroke-width="3"/><line x1="14" y1="14" x2="86" y2="86" stroke="#DC2626" stroke-width="9" stroke-linecap="round"/><line x1="86" y1="14" x2="14" y2="86" stroke="#DC2626" stroke-width="9" stroke-linecap="round"/>';
+    h='<rect x="0" y="0" width="100" height="100" rx="2" fill="'+(w&&w.wf||"#fff")+'"/>';
+    surfs(n).forEach(function(sd){
+      var r=c.s[sd[0]]?REND[c.s[sd[0]]]:null;
+      h+='<polygon points="'+sd[1]+'" fill="'+((r&&r.fill)||(w&&w.wf)||"#fff")+'" stroke="'+((r&&r.st)||"#6B7280")+'" stroke-width="'+((r&&r.sw)||3)+'" stroke-linejoin="round"/>';
+      if(r&&r.pat) h+='<polygon points="'+sd[1]+'" fill="url(#dvDiag)"/>';
+    });
+    return h+'<rect x="0" y="0" width="100" height="100" rx="2" fill="url(#dvGloss)"/>';
+  }
+  function draw(n,pulse){
+    el[n].s.innerHTML=svg(n);
+    if(pulse&&!reduce){ el[n].w.classList.remove("hit"); void el[n].w.offsetWidth; el[n].w.classList.add("hit"); }
+  }
+  function row(box,list,up){
+    list.forEach(function(n,i){
+      var w=document.createElement("div"); w.className="ht"+(i===8?" mid":"");
+      var s=document.createElementNS("http://www.w3.org/2000/svg","svg"); s.setAttribute("viewBox","-3 -3 106 106");
+      var b=document.createElement("b"); b.textContent=n;
+      if(up){ w.appendChild(b); w.appendChild(s); } else { w.appendChild(s); w.appendChild(b); }
+      box.appendChild(w); el[n]={w:w,s:s}; draw(n);
+    });
+  }
+  row(document.getElementById("hxUp"),[18,17,16,15,14,13,12,11,21,22,23,24,25,26,27,28],true);
+  row(document.getElementById("hxLo"),[48,47,46,45,44,43,42,41,31,32,33,34,35,36,37,38],false);
 
-  var st=document.getElementById("hxSt"), cnt=document.getElementById("hxCnt"), icd=document.getElementById("hxIcd"),
-      total=document.getElementById("hxTotal"), soap=[].slice.call(hx.querySelectorAll(".hx-soap span")),
-      chips=[].slice.call(hx.querySelectorAll(".hx-chip")), coded=0;
-  function code(n,c){ var t=teeth[n].r; t.setAttribute("class",c+" hl"); coded++; cnt.textContent=coded+" temuan"; setTimeout(function(){t.setAttribute("class",c)},1000); }
+  var st=document.getElementById("hxSt"), cnt=document.getElementById("hxCnt"), finds=document.getElementById("hxFinds"),
+      icd=document.getElementById("hxIcd"), total=document.getElementById("hxTotal"),
+      soap=[].slice.call(hx.querySelectorAll(".hx-soap p")), chips=[].slice.call(hx.querySelectorAll(".hx-chip")), found=[];
+  var SW={amf:"#9CA3AF",cof:"#93C5FD",car:"#FCA5A5",mis:"#FECACA",fmc:"#9CA3AF"};
+  function listFinds(){
+    cnt.textContent=found.length+" temuan";
+    finds.innerHTML=found.slice(-3).reverse().map(function(f,i){
+      return '<li'+(i===0?' class="new"':'')+'><i style="background:'+SW[f.c]+'"></i><b>'+f.n+'</b><span>'+NAMA[f.c]+(f.k?' · '+SL[f.k]:'')+'</span></li>';
+    }).join("");
+  }
+  function code(n,k,c){
+    if(!state[n]) state[n]={s:{}};
+    if(k) state[n].s[k]=c; else state[n].w=c;
+    var ex=found.filter(function(f){return f.n===n&&f.k===k})[0];
+    if(ex) ex.c=c; else found.push({n:n,k:k,c:c});
+    if(ex){ found.splice(found.indexOf(ex),1); found.push(ex); }
+    draw(n,true); listFinds();
+  }
+  function type(p){
+    var t=p.dataset.t;
+    if(reduce){ p.textContent=t; return; }
+    var i=0; p.classList.add("typing");
+    (function f(){ i+=2; p.textContent=t.slice(0,i); if(i<t.length) p._tm=setTimeout(f,22); else p.classList.remove("typing"); })();
+  }
   function chip(i){ chips[i].classList.add("on"); }
   function rupiah(v){ return "Rp "+Math.round(v).toLocaleString("id-ID"); }
   function countTo(el,to,ms,fmt){
@@ -1916,30 +1989,33 @@ footer a:hover{color:var(--ink)}
     var t0=performance.now(); (function f(t){ var p=Math.min(1,(t-t0)/ms), e=1-Math.pow(1-p,3); el.innerHTML=fmt(to*e); if(p<1) requestAnimationFrame(f); })(t0);
   }
   function reset(){
-    Object.keys(teeth).forEach(function(n){ teeth[n].r.removeAttribute("class"); });
-    miss.forEach(function(l){ l.classList.remove("on"); }); soap.forEach(function(s){ s.classList.remove("on"); });
+    state={}; found=[]; Object.keys(el).forEach(function(n){ draw(+n); }); listFinds();
+    soap.forEach(function(p){ clearTimeout(p._tm); p.textContent=""; p.classList.remove("typing"); });
     chips.forEach(function(c){ c.classList.remove("on"); }); icd.classList.remove("on");
-    st.textContent="Pemeriksaan"; st.classList.remove("done"); total.textContent="Rp 0"; coded=0; cnt.textContent="0 temuan";
+    st.textContent="Pemeriksaan"; st.classList.remove("done"); total.textContent="Rp 0";
   }
   var STEPS=[
     reset,
-    function(){ code(36,"car"); },
-    function(){ code(16,"amf"); },
-    function(){ code(46,"cof"); },
-    function(){ code(18,"mis"); miss.forEach(function(l){ l.classList.add("on"); }); },
-    function(){ soap[0].classList.add("on"); },
-    function(){ soap[1].classList.add("on"); st.textContent="Diagnosis"; },
-    function(){ soap[2].classList.add("on"); icd.classList.add("on"); },
-    function(){ soap[3].classList.add("on"); st.textContent="Selesai"; st.classList.add("done"); chip(0); },
+    function(){ code(18,null,"mis"); },
+    function(){ code(16,"DO","amf"); },
+    function(){ code(26,null,"fmc"); },
+    function(){ code(46,"MO","cof"); },
+    function(){ code(36,"MO","car"); },
+    function(){ type(soap[0]); },
+    function(){ type(soap[1]); },
+    function(){ type(soap[2]); icd.classList.add("on"); st.textContent="Diagnosis"; },
+    function(){ type(soap[3]); },
+    null,
+    function(){ code(36,"MO","cof"); st.textContent="Selesai"; st.classList.add("done"); chip(0); },
     function(){ countTo(total,450000,900,rupiah); chip(2); },
     function(){ chip(3); },
     function(){ chip(1); },
-    null,null,null,null,null
+    null,null,null,null
   ];
-  if(reduce){ STEPS.forEach(function(f){ f&&f(); }); }
+  if(reduce){ STEPS.forEach(function(f,i){ if(f&&i) f(); }); }
   else{
     var i=0, timer=null, vis=false;
-    function tick(){ var f=STEPS[i]; f&&f(); i=(i+1)%STEPS.length; timer=setTimeout(tick,i===1?700:950); }
+    function tick(){ var f=STEPS[i]; f&&f(); i=(i+1)%STEPS.length; timer=setTimeout(tick,i===1?600:(i>=7&&i<=11?1500:1000)); }
     function run(on){ if(on&&!timer) tick(); if(!on&&timer){ clearTimeout(timer); timer=null; } }
     new IntersectionObserver(function(es){ vis=es[0].isIntersecting; run(vis&&!document.hidden); },{threshold:.2}).observe(hx);
     document.addEventListener("visibilitychange",function(){ run(vis&&!document.hidden); });
@@ -1952,7 +2028,7 @@ footer a:hover{color:var(--ink)}
     hx.addEventListener("pointermove",function(e){
       if(raf) return; raf=requestAnimationFrame(function(){ raf=0;
         var b=hx.getBoundingClientRect(), px=(e.clientX-b.left)/b.width, py=(e.clientY-b.top)/b.height;
-        app.style.setProperty("--ry",((px-.5)*16-6).toFixed(2)+"deg"); app.style.setProperty("--rx",((.5-py)*10+4).toFixed(2)+"deg");
+        app.style.setProperty("--ry",((px-.5)*12-5).toFixed(2)+"deg"); app.style.setProperty("--rx",((.5-py)*8+3).toFixed(2)+"deg");
         spot.style.setProperty("--sx",(px*100).toFixed(1)+"%"); spot.style.setProperty("--sy",(py*100).toFixed(1)+"%");
       });
     });
