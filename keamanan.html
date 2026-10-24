@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pusat Keamanan — Dentiva</title>
+<meta name="description" content="Bagaimana Dentiva melindungi data pasien klinik gigi: server di Indonesia, enkripsi data identitas dan rekam medis, isolasi data per klinik, hak akses per peran, audit log, dan cadangan harian terenkripsi.">
+<link rel="canonical" href="https://dentiva.id/keamanan">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#07121F">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:site_name" content="Dentiva">
+<meta property="og:url" content="https://dentiva.id/keamanan">
+<meta property="og:title" content="Pusat Keamanan Dentiva">
+<meta property="og:image" content="https://dentiva.id/og-image.png">
+<link rel="icon" href="favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="legal.css?v=1">
+<style>
+:root{--ok:#1E7A4E;--ok-soft:#DDF2E6;--ease:cubic-bezier(.2,.7,.1,1)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ok:#5FCB94;--ok-soft:#12301F}}
+.sx-hero{position:relative;isolation:isolate;overflow:hidden;background:#07121F;color:#F3F6FA;margin-top:-71px;padding:150px 0 90px}
+.sx-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(600px 420px at 15% 10%,rgba(31,74,134,.55),transparent 70%),radial-gradient(520px 380px at 90% 30%,rgba(138,106,44,.35),transparent 70%)}
+.sx-hero::after{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 30%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse 70% 70% at 50% 30%,#000 20%,transparent 75%)}
+.sx-hero .wrap{max-width:980px}
+.sx-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#E4C98C}
+.sx-eyebrow svg{width:18px;height:18px}
+.sx-hero h1{font-family:var(--display);font-weight:400;font-size:clamp(40px,6vw,72px);line-height:1.04;letter-spacing:-.025em;margin:18px 0 0}
+.sx-hero h1 em{font-style:italic;color:#E4C98C}
+.sx-hero p{margin-top:22px;font-size:19px;line-height:1.65;color:#A9B7C9;max-width:56ch}
+.sx-facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;padding:0;list-style:none}
+.sx-facts li{padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);font-size:14px;color:#DDE5EF}
+.nav.on-dark{background:transparent;border-color:transparent;backdrop-filter:none}
+.nav.on-dark .brand{color:#F3F6FA}
+.nav.on-dark .nav-links a{color:#C2CDDB}
+.nav.on-dark .nav-links a:hover,.nav.on-dark .nav-links a[aria-current]{color:#fff}
+.nav.on-dark .btn{background:linear-gradient(135deg,#F0D9A2,#C99A4A);color:#1B1507}
+.sx-sec{padding:84px 0}
+.sx-sec .wrap{max-width:1120px}
+.sx-sec h2{font-family:var(--display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.08;letter-spacing:-.02em;margin:0}
+.sx-sec h2 em{font-style:italic;color:var(--gold)}
+.sx-lead{margin-top:14px;color:var(--ink-soft);font-size:18px;max-width:60ch}
+.sx-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.sx-card{padding:28px;border-radius:24px;background:var(--surface);border:1px solid var(--line);transition:transform .4s var(--ease),border-color .4s;opacity:0;transform:translateY(24px)}
+.sx-card.in{opacity:1;transform:none;transition:opacity .8s var(--ease),transform .8s var(--ease),border-color .4s;transition-delay:calc(var(--d,0) * 80ms)}
+.sx-card:hover{border-color:var(--gold-bright)}
+.sx-card .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--gold-soft);color:var(--gold)}
+.sx-card .ic svg{width:22px;height:22px}
+.sx-card h3{font-size:19px;margin:18px 0 8px}
+.sx-card p{color:var(--ink-soft);font-size:15.5px;line-height:1.65}
+.sx-split{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+.sx-box{padding:30px;border-radius:24px;background:var(--surface);border:1px solid var(--line)}
+.sx-box h3{font-size:20px;margin:0 0 14px}
+.sx-box ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+.sx-box li{display:grid;grid-template-columns:22px 1fr;gap:10px;color:var(--ink-soft);font-size:15.5px;line-height:1.6}
+.sx-box li::before{content:"";width:20px;height:20px;margin-top:2px;border-radius:50%;background:var(--ok-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231E7A4E' stroke-width='3'%3E%3Cpath d='M6 12.5l4 4L18 8'/%3E%3C/svg%3E") center/13px no-repeat}
+.sx-box li.wip::before{background:var(--gold-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394702F' stroke-width='2.6'%3E%3Ccircle cx='12' cy='12' r='7'/%3E%3Cpath d='M12 8v4l2.5 2'/%3E%3C/svg%3E") center/14px no-repeat}
+.sx-box b{color:var(--ink);font-weight:600}
+.sx-box a{color:var(--blue)}
+.sx-cta{margin-top:40px;padding:36px;border-radius:28px;background:#0F2842;color:#EEF2F8;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.sx-cta h3{font-family:var(--display);font-weight:400;font-size:30px;margin:0}
+.sx-cta p{color:#AFBED2;margin-top:8px}
+.sx-cta a.btn{background:linear-gradient(135deg,#F0D9A2,#C99A4A);color:#1B1507}
+.sx-note{margin-top:26px;font-size:14px;color:var(--ink-soft)}
+@media (max-width:960px){.sx-grid{grid-template-columns:1fr 1fr}.sx-split{grid-template-columns:1fr}.sx-cta{grid-template-columns:1fr}}
+@media (max-width:620px){.sx-grid{grid-template-columns:1fr}.sx-hero{padding:120px 0 64px}.sx-sec{padding:64px 0}}
+@media (prefers-reduced-motion:reduce){.sx-card{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header class="nav on-dark" id="nav">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Dentiva, ke beranda"><img src="dentiva-logo-bulat.svg" alt="" width="36" height="36">Dentiva</a>
+    <nav class="nav-links" aria-label="Utama">
+      <a href="/#fitur">Fitur</a>
+      <a href="/keamanan" aria-current="page">Keamanan</a>
+      <a href="/#paket">Harga</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <a class="btn" href="/#demo">Jadwalkan demo</a>
+  </div>
+</header>
+
+<main>
+  <section class="sx-hero">
+    <div class="wrap">
+      <span class="sx-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Pusat Keamanan</span>
+      <h1>Data pasien adalah amanah. <em>Kami menjaganya berlapis.</em></h1>
+      <p>Rekam medis adalah data paling sensitif di klinik. Halaman ini menjelaskan, apa adanya, bagaimana Dentiva menyimpan, melindungi, dan membatasi akses ke data klinik Anda.</p>
+      <ul class="sx-facts"><li>Server di Indonesia</li><li>Data identitas &amp; rekam medis terenkripsi</li><li>Terpisah per klinik</li><li>Audit log anti-ubah</li></ul>
+    </div>
+  </section>
+
+  <section class="sx-sec">
+    <div class="wrap">
+      <h2>Perlindungan yang <em>berjalan setiap hari.</em></h2>
+      <p class="sx-lead">Kontrol berikut aktif di sistem produksi Dentiva saat ini.</p>
+      <div class="sx-grid">
+        <article class="sx-card" style="--d:0"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></span><h3>Server di Indonesia</h3><p>Database, berkas, dan cadangan Dentiva tersimpan di server di Indonesia. Kami tidak memakai layanan database luar negeri untuk data klinik.</p></article>
+        <article class="sx-card" style="--d:1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><h3>Enkripsi di tingkat kolom</h3><p>Identitas pasien (nama, NIK, alamat, nomor WhatsApp) dan isi rekam medis utama dienkripsi sebelum disimpan, dengan kunci yang hanya ada di server.</p></article>
+        <article class="sx-card" style="--d:2"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><h3>Terpisah per klinik</h3><p>Setiap klinik hanya dapat melihat datanya sendiri. Pemisahan dijaga langsung di database (row level security), bukan hanya di tampilan aplikasi.</p></article>
+        <article class="sx-card" style="--d:0"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.3-5.5 6.5-5.5s5.7 2 6.5 5.5M17 11l2 2 4-4"/></svg></span><h3>Hak akses per peran</h3><p>Dokter, resepsionis, kasir, dan admin memiliki izin berbeda. Data klinis hanya dapat dibuka tenaga yang berwenang, dan izin bisa dicabut per pengguna.</p></article>
+        <article class="sx-card" style="--d:1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 8v4l3 2"/><path d="M3.5 12a8.5 8.5 0 1 0 2.5-6M3 3v4h4"/></svg></span><h3>Audit log anti-ubah</h3><p>Setiap perubahan tercatat siapa, kapan, dan apa. Catatan audit dirangkai dengan hash sehingga tidak dapat diubah atau dihapus diam-diam.</p></article>
+        <article class="sx-card" style="--d:2"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><h3>Riwayat versi rekam medis</h3><p>Rekam medis yang diubah menyimpan versi sebelumnya, dan kunjungan yang sudah dikunci hanya dapat dibuka dengan alasan yang tercatat.</p></article>
+        <article class="sx-card" style="--d:0"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7c0-2 3.6-3.5 8-3.5S20 5 20 7v10c0 2-3.6 3.5-8 3.5S4 19 4 17z"/><path d="M4 7c0 2 3.6 3.5 8 3.5S20 9 20 7M4 12c0 2 3.6 3.5 8 3.5s8-1.5 8-3.5"/></svg></span><h3>Cadangan harian terenkripsi</h3><p>Database dicadangkan setiap hari dalam bentuk terenkripsi dan disimpan bergulir selama 14 hari.</p></article>
+        <article class="sx-card" style="--d:1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Z"/><path d="M2 12h20M12 2c3 3 3 17 0 20M12 2c-3 3-3 17 0 20"/></svg></span><h3>Koneksi terenkripsi</h3><p>Semua koneksi memakai HTTPS (TLS 1.3) dengan HSTS. Server hanya membuka port web yang diperlukan; database tidak dapat diakses dari internet.</p></article>
+        <article class="sx-card" style="--d:2"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M15 7a4 4 0 1 1-4 4"/><path d="M3 21l7-7M7 17l2 2"/><circle cx="15" cy="11" r="1"/></svg></span><h3>Kunci integrasi di server</h3><p>Kredensial SATUSEHAT, WhatsApp, dan pembayaran tersimpan di server, tidak pernah dikirim ke browser. Pesan dari Meta diverifikasi tanda tangannya.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sx-sec" style="padding-top:0">
+    <div class="wrap">
+      <h2>Privasi dan <em>kepatuhan.</em></h2>
+      <div class="sx-split">
+        <div class="sx-box">
+          <h3>Data Anda, aturan Anda</h3>
+          <ul>
+            <li><span><b>Data pasien milik klinik.</b> Dentiva memprosesnya hanya untuk menyediakan layanan, atas instruksi klinik.</span></li>
+            <li><span><b>Tidak dijual, tidak untuk iklan,</b> dan tidak dipakai melatih model AI.</span></li>
+            <li><span><b>Asisten AI tanpa identitas pasien.</b> Eira bekerja dengan data operasional (pendapatan, stok, jumlah kunjungan), bukan rekam medis.</span></li>
+            <li><span><b>WhatsApp hanya dengan persetujuan pasien,</b> dan isi balasan pasien tidak disimpan di database.</span></li>
+            <li><span>Rincian lengkap ada di <a href="/privacy-policy">Kebijakan Privasi</a> dan <a href="/data-deletion">Penghapusan Data</a>.</span></li>
+          </ul>
+        </div>
+        <div class="sx-box">
+          <h3>Regulasi yang kami ikuti</h3>
+          <ul>
+            <li><span><b>UU No. 27 Tahun 2022 (PDP):</b> kebijakan privasi, prosedur hak subjek data, dan pemberitahuan insiden paling lambat 3 × 24 jam.</span></li>
+            <li><span><b>Permenkes No. 24 Tahun 2022 (Rekam Medis):</b> rekam medis elektronik dengan jejak audit dan masa simpan sesuai ketentuan.</span></li>
+            <li><span><b>SATUSEHAT Kemenkes:</b> pengiriman data kunjungan dalam format FHIR, termasuk modul gigi (odontogram dan OHIS).</span></li>
+            <li class="wip"><span><b>Sedang berlangsung:</b> pendaftaran PSE Lingkup Privat di Komdigi dan registrasi Penyedia Sistem RME di Kemenkes.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sx-cta">
+        <div><h3>Menemukan celah keamanan?</h3><p>Laporkan secara bertanggung jawab ke tim kami. Jangan mengakses data milik orang lain saat menguji.</p></div>
+        <a class="btn" href="mailto:halo@dentiva.id?subject=Laporan%20Keamanan">Laporkan ke halo@dentiva.id</a>
+      </div>
+      <p class="sx-note">Halaman ini diperbarui setiap ada perubahan kontrol keamanan. Terakhir diperbarui 25 Oktober 2026.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="brand" href="/"><img src="dentiva-logo-bulat.svg" alt="" width="36" height="36">Dentiva</a>
+      <p style="margin-top:12px;max-width:38ch">Rekam medis elektronik dan manajemen klinik gigi. Dikelola oleh PT DENTIVA TEKNOLOGI NUSANTARA, Banda Aceh.</p>
+    </div>
+    <div><h4>Produk</h4><ul><li><a href="/#fitur">Fitur</a></li><li><a href="/#paket">Harga</a></li><li><a href="/unduh">Unduh aplikasi</a></li></ul></div>
+    <div><h4>Legal</h4><ul><li><a href="/keamanan">Pusat Keamanan</a></li><li><a href="/privacy-policy">Kebijakan Privasi</a></li><li><a href="/terms-of-service">Syarat Layanan</a></li><li><a href="/data-deletion">Penghapusan Data</a></li></ul></div>
+    <div><h4>Kontak</h4><ul><li><a href="mailto:halo@dentiva.id">halo@dentiva.id</a></li><li>Senin–Sabtu, 08.00–17.00 WIB</li></ul></div>
+    <div class="copy">© 2026 PT DENTIVA TEKNOLOGI NUSANTARA</div>
+  </div>
+</footer>
+<script>
+(function(){
+  "use strict";
+  var nav=document.getElementById("nav"), hero=document.querySelector(".sx-hero");
+  function st(){ nav.classList.toggle("on-dark", hero.getBoundingClientRect().bottom>nav.offsetHeight+24); }
+  addEventListener("scroll",st,{passive:true}); st();
+  var cards=[].slice.call(document.querySelectorAll(".sx-card"));
+  if(!("IntersectionObserver" in window)){ cards.forEach(function(c){c.classList.add("in")}); return; }
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }); },{threshold:.15});
+  cards.forEach(function(c){ io.observe(c); });
+})();
+</script>
+</body>
+</html>
