@@ -7,7 +7,7 @@
 <meta name="description" content="Bagaimana Dentiva melindungi data pasien klinik gigi: server di Indonesia, enkripsi data identitas dan rekam medis, isolasi data per klinik, hak akses per peran, audit log, dan cadangan harian terenkripsi.">
 <link rel="canonical" href="https://dentiva.id/keamanan">
 <meta name="robots" content="index,follow">
-<meta name="theme-color" content="#07121F">
+<meta name="theme-color" content="#EEF3FA">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="id_ID">
 <meta property="og:site_name" content="Dentiva">
@@ -24,22 +24,22 @@
 <style>
 :root{--ok:#1E7A4E;--ok-soft:#DDF2E6;--ease:cubic-bezier(.2,.7,.1,1)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ok:#5FCB94;--ok-soft:#12301F}}
-.sx-hero{position:relative;isolation:isolate;overflow:hidden;background:#07121F;color:#F3F6FA;margin-top:-71px;padding:150px 0 90px}
-.sx-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(600px 420px at 15% 10%,rgba(31,74,134,.55),transparent 70%),radial-gradient(520px 380px at 90% 30%,rgba(138,106,44,.35),transparent 70%)}
-.sx-hero::after{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 30%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse 70% 70% at 50% 30%,#000 20%,transparent 75%)}
+.sx-hero{position:relative;isolation:isolate;overflow:hidden;background:#EEF3FA;color:var(--ink);margin-top:-71px;padding:150px 0 90px}
+.sx-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(620px 460px at 12% 8%,rgba(141,184,255,.75),transparent 70%),radial-gradient(540px 400px at 92% 24%,rgba(243,217,160,.8),transparent 70%),radial-gradient(700px 380px at 55% 115%,rgba(169,230,238,.7),transparent 70%)}
+.sx-hero::after{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(15,40,66,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(15,40,66,.06) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 30%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse 70% 70% at 50% 30%,#000 20%,transparent 75%)}
 .sx-hero .wrap{max-width:980px}
-.sx-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#E4C98C}
+.sx-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#2F6FD6}
 .sx-eyebrow svg{width:18px;height:18px}
 .sx-hero h1{font-family:var(--display);font-weight:400;font-size:clamp(40px,6vw,72px);line-height:1.04;letter-spacing:-.025em;margin:18px 0 0}
-.sx-hero h1 em{font-style:italic;color:#E4C98C}
-.sx-hero p{margin-top:22px;font-size:19px;line-height:1.65;color:#A9B7C9;max-width:56ch}
+.sx-hero h1 em{font-style:italic;color:transparent;background:linear-gradient(100deg,#2459C4,#5B86F0 45%,#B48A3E);-webkit-background-clip:text;background-clip:text}
+.sx-hero p{margin-top:22px;font-size:19px;line-height:1.65;color:var(--ink-soft);max-width:56ch}
 .sx-facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;padding:0;list-style:none}
-.sx-facts li{padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);font-size:14px;color:#DDE5EF}
+.sx-facts li{padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.85);background:rgba(255,255,255,.58);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);box-shadow:0 8px 22px -14px rgba(31,74,134,.35);font-size:14px;color:var(--ink)}
 .nav.on-dark{background:transparent;border-color:transparent;backdrop-filter:none}
-.nav.on-dark .brand{color:#F3F6FA}
-.nav.on-dark .nav-links a{color:#C2CDDB}
-.nav.on-dark .nav-links a:hover,.nav.on-dark .nav-links a[aria-current]{color:#fff}
-.nav.on-dark .btn{background:linear-gradient(135deg,#F0D9A2,#C99A4A);color:#1B1507}
+.nav.on-dark .brand{color:var(--ink)}
+.nav.on-dark .nav-links a{color:var(--ink-soft)}
+.nav.on-dark .nav-links a:hover,.nav.on-dark .nav-links a[aria-current]{color:var(--ink)}
+.nav.on-dark .btn{background:#183858;color:#fff}
 .sx-sec{padding:84px 0}
 .sx-sec .wrap{max-width:1120px}
 .sx-sec h2{font-family:var(--display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.08;letter-spacing:-.02em;margin:0}
@@ -67,6 +67,10 @@
 .sx-cta p{color:#AFBED2;margin-top:8px}
 .sx-cta a.btn{background:linear-gradient(135deg,#F0D9A2,#C99A4A);color:#1B1507}
 .sx-note{margin-top:26px;font-size:14px;color:var(--ink-soft)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .sx-hero{background:#0B1626}
+  :root:not([data-theme="light"]) .sx-hero::before{opacity:.35}
+  :root:not([data-theme="light"]) .sx-facts li{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14)}
+  :root:not([data-theme="light"]) .sx-hero h1 em{background-image:linear-gradient(100deg,#8FB4FF,#C9D8FF 45%,#E4C98C)}}
 @media (max-width:960px){.sx-grid{grid-template-columns:1fr 1fr}.sx-split{grid-template-columns:1fr}.sx-cta{grid-template-columns:1fr}}
 @media (max-width:620px){.sx-grid{grid-template-columns:1fr}.sx-hero{padding:120px 0 64px}.sx-sec{padding:64px 0}}
 @media (prefers-reduced-motion:reduce){.sx-card{opacity:1;transform:none}}
