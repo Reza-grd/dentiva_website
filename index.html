@@ -956,6 +956,60 @@ footer a:hover{color:var(--ink)}
 .hx-finds{height:94px;min-height:0;overflow:hidden}
 .hx-soap p{min-height:2.9em}
 @media (max-width:640px){.hx-soap p{min-height:4.35em}.hx-finds{height:86px}}
+
+/* ================= TEMA GLASS TERANG: SATUSEHAT, KEAMANAN, CTA, PAKET UNGGULAN ================= */
+.deep,.cta-box,.plan.featured{--g-bg:#EEF3FA;--g-ink:#0F2238;--g-soft:#4B5B70;--g-line:rgba(15,40,66,.06);
+  --g-glass:rgba(255,255,255,.58);--g-glass-2:rgba(255,255,255,.78);--g-edge:rgba(255,255,255,.85);
+  --g-shadow:0 30px 80px -34px rgba(31,74,134,.38),0 2px 6px rgba(31,74,134,.06);
+  --g-o1:rgba(141,184,255,.75);--g-o2:rgba(243,217,160,.75);--g-o3:rgba(169,230,238,.65);--g-acc:#2F6FD6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) :is(.deep,.cta-box,.plan.featured){--g-bg:#0B1626;--g-ink:#EEF2F8;--g-soft:#A9B7C9;--g-line:rgba(255,255,255,.05);
+  --g-glass:rgba(20,36,58,.55);--g-glass-2:rgba(24,42,66,.75);--g-edge:rgba(255,255,255,.12);--g-shadow:0 30px 80px -30px rgba(0,0,0,.7);
+  --g-o1:rgba(31,74,134,.55);--g-o2:rgba(110,84,36,.45);--g-o3:rgba(28,90,102,.45);--g-acc:#8FB4FF}}
+:root[data-theme="dark"] :is(.deep,.cta-box,.plan.featured){--g-bg:#0B1626;--g-ink:#EEF2F8;--g-soft:#A9B7C9;--g-line:rgba(255,255,255,.05);
+  --g-glass:rgba(20,36,58,.55);--g-glass-2:rgba(24,42,66,.75);--g-edge:rgba(255,255,255,.12);--g-shadow:0 30px 80px -30px rgba(0,0,0,.7);
+  --g-o1:rgba(31,74,134,.55);--g-o2:rgba(110,84,36,.45);--g-o3:rgba(28,90,102,.45);--g-acc:#8FB4FF}
+
+/* bagian (SATUSEHAT & Keamanan) */
+.deep{position:relative;isolation:isolate;overflow:hidden;color:var(--g-ink);
+  background:radial-gradient(640px 460px at 8% 12%,var(--g-o1),transparent 70%),radial-gradient(560px 420px at 94% 30%,var(--g-o2),transparent 70%),radial-gradient(760px 420px at 50% 112%,var(--g-o3),transparent 70%),var(--g-bg)}
+.deep::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(var(--g-line) 1px,transparent 1px),linear-gradient(90deg,var(--g-line) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse 75% 70% at 50% 45%,#000 25%,transparent 78%);mask-image:radial-gradient(ellipse 75% 70% at 50% 45%,#000 25%,transparent 78%)}
+.deep .sec-head p{color:var(--g-soft)}
+.deep h2 em{color:transparent;background:linear-gradient(100deg,#2459C4 0%,#5B86F0 40%,#B48A3E 80%);-webkit-background-clip:text;background-clip:text}
+:root[data-theme="dark"] .deep h2 em{background-image:linear-gradient(100deg,#8FB4FF,#C9D8FF 40%,#E4C98C 80%)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .deep h2 em{background-image:linear-gradient(100deg,#8FB4FF,#C9D8FF 40%,#E4C98C 80%)}}
+.deep .glassy,.ss-flow,.sc{background:var(--g-glass);border:1px solid var(--g-edge);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);box-shadow:var(--g-shadow)}
+.sc:hover{background:var(--g-glass-2);border-color:#B9CCF2}
+.sc svg,.ss-points svg,.node .box svg{color:var(--g-acc)}
+.sc p,.ss-points li,.node,.res li small{color:var(--g-soft)}
+.ss-points li b{color:var(--g-ink)}
+.node .box{background:var(--g-glass-2);border-color:var(--g-edge);box-shadow:0 10px 26px -14px rgba(31,74,134,.4)}
+.wire{background:repeating-linear-gradient(90deg,rgba(47,111,214,.3) 0 6px,transparent 6px 12px)}
+.wire i{background:var(--g-acc);box-shadow:0 0 12px var(--g-acc)}
+.res li{background:var(--g-glass-2);border:1px solid var(--g-edge)}
+.st-badge{background:rgba(47,111,214,.1);color:var(--g-soft)}
+.st-badge.sending{color:#B4842E;background:rgba(228,201,140,.22)}
+.st-badge.done{background:rgba(30,122,78,.12);color:#1E7A4E}
+:root[data-theme="dark"] .st-badge.done{color:#7EDDAA}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .st-badge.done{color:#7EDDAA}}
+.deep .sec-more{color:var(--g-acc)}
+
+/* kotak CTA "Jadwalkan demo" */
+.cta-box{color:var(--g-ink);border:1px solid var(--g-edge);box-shadow:var(--g-shadow);
+  background:radial-gradient(520px 380px at 0% 0%,var(--g-o1),transparent 70%),radial-gradient(480px 360px at 100% 100%,var(--g-o2),transparent 70%),radial-gradient(420px 300px at 70% 0%,var(--g-o3),transparent 70%),var(--g-bg)}
+.cta-box::before{border-color:rgba(47,111,214,.18);box-shadow:0 0 0 60px rgba(255,255,255,.18),0 0 0 120px rgba(255,255,255,.1)}
+.cta-box h2 em{color:transparent;background:linear-gradient(100deg,#2459C4,#5B86F0 45%,#B48A3E);-webkit-background-clip:text;background-clip:text}
+.cta-box>div>p{color:var(--g-soft)}
+.cta-box form{background:var(--g-glass-2);border:1px solid var(--g-edge);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);box-shadow:0 20px 50px -26px rgba(31,74,134,.45)}
+
+/* kartu paket unggulan */
+.plan.featured{color:var(--g-ink);border:1.5px solid rgba(47,111,214,.35);box-shadow:var(--g-shadow);
+  background:radial-gradient(360px 260px at 100% 0%,var(--g-o1),transparent 72%),radial-gradient(320px 240px at 0% 100%,var(--g-o2),transparent 72%),var(--g-glass-2);
+  backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4)}
+.plan.featured .for,.plan.featured li,.plan.featured .per{color:var(--g-soft)}
+.plan.featured li svg{color:var(--g-acc)}
+
+:root[data-theme="dark"] .cta-box h2 em{background-image:linear-gradient(100deg,#8FB4FF,#C9D8FF 45%,#E4C98C)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .cta-box h2 em{background-image:linear-gradient(100deg,#8FB4FF,#C9D8FF 45%,#E4C98C)}}
 </style>
 </head>
 <body>
