@@ -1567,7 +1567,7 @@ footer a:hover{color:var(--ink)}
             <li class="no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"/></svg>Pengingat WhatsApp</li>
             <li class="no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"/></svg>Laporan kustom</li>
           </ul>
-          <a class="btn btn-ghost" href="#demo" data-plan="Starter">Pilih Starter</a>
+          <a class="btn btn-ghost" href="https://dentiva-main.vercel.app/daftar?paket=starter&amp;siklus=monthly" data-daftar="starter">Pilih Starter</a>
         </article>
         <article class="plan featured reveal" style="--d:1">
           <span class="tag">Paling populer</span>
@@ -1581,7 +1581,7 @@ footer a:hover{color:var(--ink)}
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Pengingat WhatsApp otomatis</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Laporan kustom</li>
           </ul>
-          <a class="btn btn-gold" href="#demo" data-plan="Pro"><span>Pilih Pro</span></a>
+          <a class="btn btn-gold" href="https://dentiva-main.vercel.app/daftar?paket=pro&amp;siklus=monthly" data-daftar="pro"><span>Pilih Pro</span></a>
         </article>
         <article class="plan reveal" style="--d:2">
           <h3>Enterprise</h3>
@@ -1594,8 +1594,12 @@ footer a:hover{color:var(--ink)}
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Dukungan prioritas</li>
           </ul>
           <a class="btn btn-ghost" href="#demo" data-plan="Enterprise">Hubungi tim kami</a>
+          <p class="plan-note" style="margin-top:.6rem;font-size:.8rem;opacity:.7;text-align:center">Penawaran khusus untuk lebih dari satu cabang.</p>
         </article>
       </div>
+      <p class="reveal" style="text-align:center;margin-top:1.4rem;font-size:.9rem;opacity:.75">
+        Daftar dalam 2 menit: isi data klinik → verifikasi email → selesaikan pembayaran paket → klinik siap dipakai.
+      </p>
     </div>
   </section>
 
@@ -1619,7 +1623,8 @@ footer a:hover{color:var(--ink)}
       <div class="cta-box reveal">
         <div>
           <h2>Lihat Dentiva bekerja <em>di klinik Anda.</em></h2>
-          <p>Isi data singkat. Tim kami akan menghubungi lewat WhatsApp untuk mengatur jadwal demo, gratis dan tanpa kewajiban.</p>
+          <p>Ingin melihat dulu? Isi data singkat, tim kami menghubungi lewat WhatsApp untuk mengatur demo — gratis dan tanpa kewajiban.</p>
+          <p style="margin-top:.8rem">Sudah yakin? <a href="https://dentiva-main.vercel.app/daftar?paket=pro&amp;siklus=monthly" style="font-weight:600;text-decoration:underline">Daftarkan klinik sekarang →</a></p>
         </div>
         <form id="demoForm" novalidate>
           <label>Nama lengkap<input type="text" name="nama" required autocomplete="name" placeholder="drg. Nama Anda"></label>
@@ -1984,6 +1989,7 @@ footer a:hover{color:var(--ink)}
   /* ================= PRICING ================= */
   seg($("#billSeg"),function(i){
     var y=i===1;
+    $$("[data-daftar]").forEach(function(a){a.href="https://dentiva-main.vercel.app/daftar?paket="+a.dataset.daftar+"&siklus="+(y?"yearly":"monthly")});
     $$(".price").forEach(function(p){var b=$("b",p);b.textContent="Rp"+(y?b.dataset.y:b.dataset.m);b.classList.remove("swap");void b.offsetWidth;b.classList.add("swap");$(".per",p).textContent=y?"/tahun":"/bulan"});
   });
   $$("[data-plan]").forEach(function(a){a.addEventListener("click",function(){$("#paketSel").value=a.dataset.plan})});
